@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/script.js"></script>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="text-2xl font-bold">ATHLETE</div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-red-500">Home</a></li>
+                <li><a href="#header" class="hover:text-red-500">Header Option</a></li>
+                <li><a href="#page" class="hover:text-red-500">Page!</a></li>
+                <li><a href="#products" class="hover:text-red-500">Products</a></li>
+                <li><a href="#events" class="hover:text-red-500">Event Calendar</a></li>
+                <li><a href="#blog" class="hover:text-red-500">Blog</a></li>
+                <li><a href="#contact" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white p-5">
+            <a href="#home" class="block py-2 hover:text-red-500">Home</a>
+            <a href="#header" class="block py-2 hover:text-red-500">Header Option</a>
+            <a href="#page" class="block py-2 hover:text-red-500">Page!</a>
+            <a href="#products" class="block py-2 hover:text-red-500">Products</a>
+            <a href="#events" class="block py-2 hover:text-red-500">Event Calendar</a>
+            <a href="#blog" class="block py-2 hover:text-red-500">Blog</a>
+            <a href="#contact" class="block py-2 hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+    <section id="home" class="relative flex flex-col items-center justify-center text-center h-screen px-5 sm:px-10 lg:px-20 bg-cover bg-center" 
+         style="background-image: url('https://images.pexels.com/photos/13122470/pexels-photo-13122470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+    
+        <!-- Overlay to improve text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-3xl text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">MAKE YOU BE THE FIGHTER</h1>
+            <p class="text-lg sm:text-xl mt-4">Join our gym and become the best version of yourself.</p>
+            <button class="mt-6 bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition duration-300">
+                TRY A FREE CLASS
+            </button>
+         </div>
+    </section>
+
+
+    <section class="flex flex-col md:flex-row">
+        <!-- Men Class -->
+        <div class="w-full md:w-1/2 bg-cover bg-center py-16 px-6 text-white" style="background-image: url('');">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold">MEN CLASS</h2>
+                <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adi sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.</p>
+                <button class="mt-6 border-2 border-white text-white py-2 px-6 hover:bg-white hover:text-black transition">
+                    JOIN NOW
+                </button>
+            </div>
+        </div>
+    
+        <!-- Women Class -->
+        <div class="w-full md:w-1/2 bg-cover bg-center py-16 px-6 text-white" style="background-image: url('');">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold">WOMEN CLASS</h2>
+                <p class="mt-4 text-lg">Lorem ipsum dolor sit amet, consectetur adi sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit.</p>
+                <button class="mt-6 border-2 border-white text-white py-2 px-6 hover:bg-white hover:text-black transition">
+                    JOIN NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative text-white py-16 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/11266960/pexels-photo-11266960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
+        <!-- Content -->
+        <div class="relative max-w-5xl mx-auto text-center px-6">
+            <h2 class="text-4xl font-bold uppercase">About the Athlete</h2>
+            <p class="mt-4 text-lg">Working from home meant we could vary snack and coffee breaks, change our desks or view, goof off, drink on the job, even spend the day in pajamas.</p>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold">Responsive & Retina Ready</h3>
+                    <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+    
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-play text-3xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold">Video & Images Background</h3>
+                    <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+    
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-rocket text-3xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold">Calendar and Event Manager</h3>
+                    <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+    
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-paint-brush text-3xl"></i>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold">Unlimited Colors Support</h3>
+                    <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-globe text-3xl"></i>
+                    </div>
+                        <h3 class="text-xl font-semibold ">Parallax Video Background</h3>
+                        <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+    
+                <!-- Feature 6 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-red-600 p-4 rounded-md">
+                        <i class="fas fa-cog text-3xl"></i>
+                    </div>
+                        <h3 class="text-xl font-semibold ">Powerful Theme Option</h3>
+                        <p class="mt-2 text-gray-300">Fusce gravida tortor felis. Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <!-- Working Hours -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                <h3 class="bg-red-600 text-white text-lg font-bold uppercase p-3 rounded-t-md">Working Hours</h3>
+                <p class="text-gray-300 mt-3">Ac dictum risus sagittis id morbi posu justo eleifend libero ultricies asunt</p>
+                <ul class="mt-4 space-y-2">
+                    <li>Monday – Friday: <span class="font-semibold">08:00 – 16:00</span></li>
+                    <li>Saturday: <span class="font-semibold">09:30 – 15:30</span></li>
+                    <li>Sunday: <span class="font-semibold">09:30 – 15:30</span></li>
+                </ul>
+            </div>
+    
+            <!-- What's News -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                <h3 class="bg-red-600 text-white text-lg font-bold uppercase p-3 rounded-t-md">What’s News?</h3>
+                <div class="mt-4 space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-red-600 text-white text-center p-3 w-14 rounded-md">
+                            <p class="text-2xl font-bold">25</p>
+                            <p class="text-sm uppercase">Oct</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-400">Yoga Standard New Class</h4>
+                            <p class="text-gray-300 text-sm">Room C 9:00 – 10:00</p>
+                            <p class="text-gray-400 text-sm">Amanda Bale</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-red-600 text-white text-center p-3 w-14 rounded-md">
+                            <p class="text-2xl font-bold">28</p>
+                            <p class="text-sm uppercase">Oct</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-red-400">Boxing New Class</h4>
+                            <p class="text-gray-300 text-sm">Room C 9:00 – 10:00</p>
+                            <p class="text-gray-400 text-sm">Alex Krasnow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Contact Us -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                <h3 class="bg-red-600 text-white text-lg font-bold uppercase p-3 rounded-t-md">Contact Us</h3>
+                <div class="mt-4">
+                    <!-- Embed Google Map -->
+                    <iframe class="w-full h-52 rounded-md"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093705!2d144.95592531531817!3d-37.817209979751994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df0dfb1c5%3A0x2b3e5bdf6f3e3e3d!2sFederation+Square!5e0!3m2!1sen!2sau!4v1616453453453!5m2!1sen!2sau"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="relative h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center text-center text-white">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/17898141/pexels-photo-17898141/free-photo-of-a-muscular-man-flexing-his-muscles-at-the-gym.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="absolute inset-0 bg-red-700 opacity-80"></div>
+    
+        <!-- Content -->
+        <div class="relative z-10">
+            <h3 class="text-lg md:text-xl font-light uppercase">Start Your</h3>
+            <h1 class="text-3xl md:text-5xl font-extrabold">TRAINING TODAY</h1>
+            <button class="mt-4 px-6 py-2 border-2 border-white text-white font-semibold uppercase hover:bg-white hover:text-red-700 transition duration-300">
+                Play Now
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-gray-900 text-white text-center py-10">
+        <!-- Title and Subtitle -->
+        <h2 class="text-3xl font-bold">ATHLETE TIMETABLE</h2>
+        <p class="mt-2 text-gray-300 max-w-3xl mx-auto">
+            Working from home meant we could vary snack and coffee breaks, change our desks or view, goof off, drink on the job, even spend the day in pajamas.
+        </p>
+    
+        <!-- Image Section -->
+        <div class="relative flex justify-center mt-6">
+            <!-- Left Image -->
+            <div class="w-1/2">
+                <img src="https://images.pexels.com/photos/5327465/pexels-photo-5327465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Athlete Training" class="w-full h-full object-cover">
+            </div>
+    
+            <!-- Right Image -->
+            <div class="w-1/2">
+                <img src="https://images.pexels.com/photos/13020494/pexels-photo-13020494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Athlete Training" class="w-full h-full object-cover">
+            </div>
+    
+            <!-- Center Circular Badge -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white flex flex-col items-center justify-center text-red-600 font-bold text-xl rounded-full shadow-lg">
+                <span>OUR</span>
+                <span class="text-sm text-gray-500">PRICING</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="bg-red-500 text-white py-10">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Boxing Gloves Card -->
+            <div class="text-center p-6 border-r border-white">
+                <h3 class="text-xl font-bold">BOXING GLOVES</h3>
+                <p class="mt-2 text-white text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adi sollicitudin.
+                    Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis.
+                </p>
+                <div class="mt-4 inline-block border-2 border-white px-6 py-2 font-bold text-lg">
+                    $199
+                </div>
+            </div>
+    
+            <!-- Yoga Monthly Card -->
+            <div class="text-center p-6">
+                <h3 class="text-xl font-bold">YOGA MONTHLY CARD</h3>
+                <p class="mt-2 text-white text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adi sollicitudin.
+                    Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis.
+                </p>
+                <div class="mt-4 inline-block border-2 border-white px-6 py-2 font-bold text-lg">
+                    $39
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-black py-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="https://images.pexels.com/photos/29825215/pexels-photo-29825215/free-photo-of-black-and-white-image-of-a-female-bodybuilder-in-gym.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Mike Stramond" class="w-full h-60 object-cover transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 w-full  p-6 text-white text-center transition-all duration-500 group-hover:-translate-y-16 group-hover:bg-red-500">
+                    <div class="w-14 h-14 bg-red-500 rounded-full flex items-center justify-center mx-auto -mt-10 transition-all duration-500 group-hover:bg-white">
+                        <img src="https://img.icons8.com/?size=132&id=whwPQiqSQvby&format=png" alt="Icon" class="w-8 group-hover:invert">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">MIKE STRAMOND</h3>
+                    <div class="w-10 mx-auto border-b-2 border-white mt-2"></div>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="https://images.pexels.com/photos/5327511/pexels-photo-5327511.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="John Mike" class="w-full h-60 object-cover transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 w-full p-6 text-white text-center transition-all duration-500 group-hover:-translate-y-16 group-hover:bg-red-500">
+                    <div class="w-14 h-14 bg-red-500 rounded-full flex items-center justify-center mx-auto -mt-10 transition-all duration-500 group-hover:bg-white">
+                        <img src="https://img.icons8.com/?size=132&id=whwPQiqSQvby&format=png" alt="Icon" class="w-8 group-hover:invert">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">JOHN MIKE</h3>
+                    <div class="w-10 mx-auto border-b-2 border-white mt-2"></div>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="relative group overflow-hidden rounded-lg">
+                <img src="https://images.pexels.com/photos/30868255/pexels-photo-30868255/free-photo-of-man-exercising-on-gym-machine-from-behind.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mike Doe" class="w-full h-60 object-cover transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 w-full p-6 text-white text-center transition-all duration-500 group-hover:-translate-y-16 group-hover:bg-red-500">
+                    <div class="w-14 h-14 bg-red-500 rounded-full flex items-center justify-center mx-auto -mt-10 transition-all duration-500 group-hover:bg-white">
+                        <img src="https://img.icons8.com/?size=132&id=whwPQiqSQvby&format=png" alt="Icon" class="w-8 group-hover:invert">
+                    </div>
+                    <h3 class="text-lg font-bold mt-4">MIKE DOE</h3>
+                    <div class="w-10 mx-auto border-b-2 border-white mt-2"></div>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <section class="max-w-6xl mx-auto text-center py-12 bg-black text-white">
+            <h2 class="text-3xl font-bold mb-6">LEETEE</h2>
+    
+            <!-- Filter Buttons -->
+            <div class="flex justify-center gap-4 mb-8">
+                <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded" data-category="all">All Class</button>
+                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="boxing">Boxing class</button>
+                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="yoga">Yoga class</button>
+                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="sport">Sport class</button>
+                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="fitness">Fitness class</button>
+            </div>
+    
+            <!-- Class Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="class-card boxing relative group overflow-hidden rounded-lg" data-category="boxing">
+                    <img src="https://images.pexels.com/photos/30863686/pexels-photo-30863686/free-photo-of-outdoor-basketball-practice-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Psychology of Training" class="w-full h-60 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
+                        <h3 class="text-lg font-bold border border-white px-4 py-2">PSYCHOLOGY OF TRAINING</h3>
+                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            Learn the mental strategies for peak performance and endurance in training.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="class-card yoga relative group overflow-hidden rounded-lg" data-category="yoga">
+                    <img src="https://images.pexels.com/photos/1608099/pexels-photo-1608099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Practical Self Defence" class="w-full h-60 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
+                        <h3 class="text-lg font-bold border border-white px-4 py-2">PRACTICAL SELF DEFENCE</h3>
+                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            Improve your self-defense skills with practical and real-life combat techniques.
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="class-card sport relative group overflow-hidden rounded-lg" data-category="sport">
+                    <img src="https://images.pexels.com/photos/4754132/pexels-photo-4754132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Boxing for Girls" class="w-full h-60 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
+                        <h3 class="text-lg font-bold border border-white px-4 py-2">BOXING FOR GIRLS</h3>
+                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            Empower yourself with boxing techniques designed specifically for women.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            // Filter Functionality
+            const buttons = document.querySelectorAll(".filter-btn");
+            const cards = document.querySelectorAll(".class-card");
+    
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const category = button.getAttribute("data-category");
+    
+                    buttons.forEach(btn => btn.classList.remove("bg-red-500", "text-white"));
+                    button.classList.add("bg-red-500", "text-white");
+    
+                    cards.forEach(card => {
+                        if (category === "all" || card.getAttribute("data-category") === category) {
+                            card.classList.remove("hidden");
+                        } else {
+                            card.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        </script>
+        
+        <footer class="bg-black text-gray-400 py-8">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Left Section: Copyright & Social Media -->
+        <div class="flex flex-col items-start">
+            <p class="text-sm">
+                Copyright © 2016 <span class="text-red-500">Athlete Fitness</span>
+            </p>
+            <p class="text-sm mt-1">Designed and developed by SFThemes</p>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 mt-4">
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-600 hover:bg-red-500 hover:border-red-500 transition">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-600 hover:bg-red-500 hover:border-red-500 transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-600 hover:bg-red-500 hover:border-red-500 transition">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="w-8 h-8 flex items-center justify-center rounded-full border border-gray-600 hover:bg-red-500 hover:border-red-500 transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Middle Section: Location & Contact -->
+        <div>
+            <h3 class="text-white text-lg font-bold">Our location</h3>
+            <p class="mt-2 text-sm">
+                Room 1214 #187 Tay Son Building, Dong Da Distr <br>
+                Ha Noi, Vietnam
+            </p>
+            <p class="mt-2 text-sm">Phone: +84 4 22414757</p>
+            <p class="mt-2 text-sm">Email: inwavethemes@gmail.com</p>
+        </div>
+
+        <!-- Right Section: Keep in Touch -->
+        <div>
+            <h3 class="text-white text-lg font-bold">Keep in touch</h3>
+            <p class="mt-2 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adi sollicitud ante tellus ornare mi, et mollis
+            </p>
+            <div class="mt-4 relative">
+                <input type="email" placeholder="Your Email"
+                    class="w-full py-2 px-4 bg-gray-800 text-white rounded-full outline-none border border-gray-600">
+                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 hover:bg-red-500 text-white px-4 py-2 rounded-full">
+                    →
+                </button>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/YOUR_FA_KIT_CODE.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+</body>
+</html>
