@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+    <div class="container mx-auto px-4 py-10">
+        <!-- Page Title -->
+        <h1 class="text-3xl font-bold text-white mb-6">Shopping Cart</h1>
+
+        <!-- Cart Table -->
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="border-b border-gray-700">
+                        <th class="py-3">Product</th>
+                        <th class="py-3">Price</th>
+                        <th class="py-3">Quantity</th>
+                        <th class="py-3">Total</th>
+                        <th class="py-3">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Product Row -->
+                    <tr class="border-b border-gray-700">
+                        <td class="py-4 flex items-center gap-4">
+                            <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16">
+                            <p>FightCo Training Gloves</p>
+                        </td>
+                        <td class="py-4">£128.00</td>
+                        <td class="py-4">
+                            <input type="number" value="1" min="1" class="w-16 bg-gray-800 text-white px-2 py-1 rounded">
+                        </td>
+                        <td class="py-4">£128.00</td>
+                        <td class="py-4">
+                            <button class="bg-red-600 text-white px-3 py-1 rounded">Remove</button>
+                        </td>
+                    </tr>
+
+                    <!-- Product Row -->
+                    <tr class="border-b border-gray-700">
+                        <td class="py-4 flex items-center gap-4">
+                            <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16">
+                            <p>FightCo MMA Shorts</p>
+                        </td>
+                        <td class="py-4">£70.00</td>
+                        <td class="py-4">
+                            <input type="number" value="1" min="1" class="w-16 bg-gray-800 text-white px-2 py-1 rounded">
+                        </td>
+                        <td class="py-4">£70.00</td>
+                        <td class="py-4">
+                            <button class="bg-red-600 text-white px-3 py-1 rounded">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="mt-6 flex justify-between bg-gray-900 p-6 rounded-lg shadow-lg">
+            <div>
+                <p class="text-lg">Subtotal: <span class="font-bold">£198.00</span></p>
+                <p class="text-gray-400 text-sm">Taxes and shipping calculated at checkout.</p>
+            </div>
+            <button class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold text-lg">Proceed to Checkout</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+<body class="bg-black text-white">
+
+    <!-- Header Section -->
+    <header class="text-center py-12">
+        <h1 class="text-4xl font-bold uppercase">Boxing for girls</h1>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="max-w-6xl mx-auto px-6">
+        <h2 class="text-center text-xl text-gray-400">HOW MUCH DOES IT COST?</h2>
+        <h3 class="text-center text-3xl font-semibold mt-2">PRICING TIERS AND BENEFITS</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <!-- Pricing Card 1 -->
+            <div class="bg-red-500 p-6 rounded-lg text-white">
+                <img src="https://via.placeholder.com/300" alt="Pricing Image" class="w-full h-56 object-cover mb-4">
+                <p class="text-sm uppercase font-semibold">Monthly Fee</p>
+                <h4 class="text-2xl font-bold mt-2">Fitness for Man</h4>
+                <p class="text-sm mt-4">Phasellus molestie magna non est bibendum non venenatis nisl tempor lorem ipsum dolor.</p>
+                <div class="flex items-center justify-between mt-6">
+                    <span class="text-3xl font-bold">$59</span>
+                    <button class="border border-white px-4 py-2 uppercase text-sm">Join Now</button>
+                </div>
+            </div>
+
+            <!-- Pricing Card 2 -->
+            <div class="bg-red-500 p-6 rounded-lg text-white">
+                <img src="https://via.placeholder.com/300" alt="Pricing Image" class="w-full h-56 object-cover mb-4">
+                <p class="text-sm uppercase font-semibold">Monthly Fee</p>
+                <h4 class="text-2xl font-bold mt-2">Fitness for Woman</h4>
+                <p class="text-sm mt-4">Phasellus molestie magna non est bibendum non venenatis nisl tempor lorem ipsum dolor.</p>
+                <div class="flex items-center justify-between mt-6">
+                    <span class="text-3xl font-bold">$59</span>
+                    <button class="border border-white px-4 py-2 uppercase text-sm">Join Now</button>
+                </div>
+            </div>
+
+            <!-- Pricing Card 3 -->
+            <div class="bg-red-500 p-6 rounded-lg text-white">
+                <img src="https://via.placeholder.com/300" alt="Pricing Image" class="w-full h-56 object-cover mb-4">
+                <p class="text-sm uppercase font-semibold">Monthly Fee</p>
+                <h4 class="text-2xl font-bold mt-2">Fitness for Kids</h4>
+                <p class="text-sm mt-4">Phasellus molestie magna non est bibendum non venenatis nisl tempor lorem ipsum dolor.</p>
+                <div class="flex items-center justify-between mt-6">
+                    <span class="text-3xl font-bold">$59</span>
+                    <button class="border border-white px-4 py-2 uppercase text-sm">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Image Slider -->
+            <div class="w-full md:w-3/4">
+                <div class="swiper mySwiper rounded-lg overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="image1.png" alt="Boxing" class="w-full">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image2.png" alt="Boxing" class="w-full">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="image3.png" alt="Boxing" class="w-full">
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Trainer Card -->
+            <div class="w-full md:w-1/4 bg-gray-900 rounded-lg p-4 text-center">
+                <div class="bg-red-600 text-white py-2 rounded-t-lg">
+                    <h3 class="text-lg font-bold">CLASS TRAINER</h3>
+                </div>
+                <div class="flex flex-col items-center py-4">
+                    <img src="trainer.png" alt="Trainer" class="w-24 h-24 rounded-full border-4 border-white">
+                    <h4 class="text-xl font-semibold mt-3">JOHN MIKE</h4>
+                    <p class="text-gray-400 text-sm mt-2 px-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam...
+                    </p>
+                    <button class="mt-4 px-4 py-2 border border-white rounded-lg hover:bg-red-600 transition">
+                        PROFILE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 3000 },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+<section class="bg-black text-white flex justify-center items-center min-h-screen">
+
+    <div class="container mx-auto px-4 py-10">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-gray-900 rounded-lg shadow-lg p-6">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg">
+                    <h3 class="text-lg font-bold">CLASS INFORMATION</h3>
+                </div>
+                <div class="p-4 space-y-4">
+                    <p class="flex items-center"><span class="mr-2">💰</span> Price: $75</p>
+                    <p class="flex items-center"><span class="mr-2">⏳</span> Time: 6 months</p>
+                    <p class="flex items-center"><span class="mr-2">📜</span> Certificate: Professional</p>
+                    <p class="flex items-center"><span class="mr-2">📅</span> TimeFrame: Monday - Friday</p>
+                </div>
+                <div class="px-4 pb-4">
+                    <button class="w-full border border-red-600 text-red-600 py-2 rounded-lg hover:bg-red-600 hover:text-white transition">
+                        TAKE THIS COURSE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-900 rounded-lg shadow-lg p-6">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg">
+                    <h3 class="text-lg font-bold">ADVANCED TRAINING</h3>
+                </div>
+                <div class="p-4 space-y-4">
+                    <p class="flex items-center"><span class="mr-2">💰</span> Price: $150</p>
+                    <p class="flex items-center"><span class="mr-2">⏳</span> Time: 12 months</p>
+                    <p class="flex items-center"><span class="mr-2">📜</span> Certificate: Expert Level</p>
+                    <p class="flex items-center"><span class="mr-2">📅</span> TimeFrame: Monday - Saturday</p>
+                </div>
+                <div class="px-4 pb-4">
+                    <button class="w-full border border-red-600 text-red-600 py-2 rounded-lg hover:bg-red-600 hover:text-white transition">
+                        TAKE THIS COURSE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-900 rounded-lg shadow-lg p-6">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg">
+                    <h3 class="text-lg font-bold">BEGINNER PROGRAM</h3>
+                </div>
+                <div class="p-4 space-y-4">
+                    <p class="flex items-center"><span class="mr-2">💰</span> Price: $50</p>
+                    <p class="flex items-center"><span class="mr-2">⏳</span> Time: 3 months</p>
+                    <p class="flex items-center"><span class="mr-2">📜</span> Certificate: Basic Level</p>
+                    <p class="flex items-center"><span class="mr-2">📅</span> TimeFrame: Weekends Only</p>
+                </div>
+                <div class="px-4 pb-4">
+                    <button class="w-full border border-red-600 text-red-600 py-2 rounded-lg hover:bg-red-600 hover:text-white transition">
+                        TAKE THIS COURSE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+</html>

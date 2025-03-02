@@ -18,9 +18,26 @@
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#home" class="hover:text-red-500">Home</a></li>
-                <li><a href="#header" class="hover:text-red-500">Header Option</a></li>
-                <li><a href="#page" class="hover:text-red-500">Page!</a></li>
-                <li><a href="#products" class="hover:text-red-500">Products</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-red-500">Page!</a>
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./pages/about-us.html" class="block px-4 py-2 hover:bg-red-500">About Us</a></li>
+                        <li><a href="./pages/trainers.html" class="block px-4 py-2 hover:bg-red-500">Our Trainer</a></li>
+                        <li><a href="./pages/pricing.html" class="block px-4 py-2 hover:bg-red-500">Pricing Table</a></li>
+                        <li><a href="./pages/class-details.html" class="block px-4 py-2 hover:bg-red-500">Class Details</a></li>
+                    </ul>
+                </li>
+                
+
+                <li class="relative group">
+                    <a href="#" class="hover:text-red-500">Products</a>
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./pages/about-us.html" class="block px-4 py-2 hover:bg-red-500">Product list</a></li>
+                        <li><a href="./pages/trainers.html" class="block px-4 py-2 hover:bg-red-500">Product cart</a></li>
+                        <li><a href="./pages/pricing.html" class="block px-4 py-2 hover:bg-red-500">Product details</a></li>
+                    </ul>
+                </li>
+                
                 <li><a href="#events" class="hover:text-red-500">Event Calendar</a></li>
                 <li><a href="#blog" class="hover:text-red-500">Blog</a></li>
                 <li><a href="#contact" class="hover:text-red-500">Contact Us</a></li>
@@ -221,7 +238,6 @@
         </div>
     </section>
 
-    
     <section class="relative h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center text-center text-white">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/17898141/pexels-photo-17898141/free-photo-of-a-muscular-man-flexing-his-muscles-at-the-gym.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>

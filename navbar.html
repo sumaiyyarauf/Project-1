@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="text-2xl font-bold">ATHLETE</div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-red-500">Home</a></li>
+                <li><a href="#header" class="hover:text-red-500">Header Option</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-red-500">Page!</a>
+                    <ul class="absolute left-0 mt-2 w-48 bg-gray-800 text-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <li><a href="./about-us/about.html" class="block px-4 py-2 hover:bg-red-500">About Us</a></li>
+                        <li><a href="./trainers.html" class="block px-4 py-2 hover:bg-red-500">Our Trainer</a></li>
+                        <li><a href="./pricing.html" class="block px-4 py-2 hover:bg-red-500">Pricing Table</a></li>
+                        <li><a href="./class-details.html" class="block px-4 py-2 hover:bg-red-500">Class Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="#products" class="hover:text-red-500">Products</a></li>
+                <li><a href="#events" class="hover:text-red-500">Event Calendar</a></li>
+                <li><a href="#blog" class="hover:text-red-500">Blog</a></li>
+                <li><a href="#contact" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white p-5">
+            <a href="#home" class="block py-2 hover:text-red-500">Home</a>
+            <a href="#header" class="block py-2 hover:text-red-500">Header Option</a>
+            <a href="#page" class="block py-2 hover:text-red-500">Page!</a>
+            <a href="#products" class="block py-2 hover:text-red-500">Products</a>
+            <a href="#events" class="block py-2 hover:text-red-500">Event Calendar</a>
+            <a href="#blog" class="block py-2 hover:text-red-500">Blog</a>
+            <a href="#contact" class="block py-2 hover:text-red-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
