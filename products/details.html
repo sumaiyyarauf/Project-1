@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+    <div class="container mx-auto px-4 py-10">
+
+        <h1 class="text-4xl font-bold text-center mb-8">Product Details</h1>
+
+        <!-- Grid for Multiple Products -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Product 1 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="Gloves" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">FightCo Training Gloves</h2>
+                <p class="text-red-500 text-lg font-bold">£128.00</p>
+                <p class="text-gray-400 mt-2">Durable and comfortable boxing gloves designed for professionals.</p>
+                <p class="text-green-400 font-bold mt-2">In Stock</p>
+                <button class="mt-4 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="T-Shirt" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">FightCo Kids T-Shirt</h2>
+                <p class="text-red-500 text-lg font-bold">£200.60 <span class="line-through text-gray-400">£227.96</span></p>
+                <p class="text-gray-400 mt-2">High-quality fabric with a bold FightCo design.</p>
+                <p class="text-green-400 font-bold mt-2">In Stock</p>
+                <button class="mt-4 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="Shorts" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">FightCo MMA Shorts</h2>
+                <p class="text-red-500 text-lg font-bold">£70.00 <span class="line-through text-gray-400">£75.00</span></p>
+                <p class="text-gray-400 mt-2">Lightweight and flexible shorts for ultimate performance.</p>
+                <p class="text-green-400 font-bold mt-2">In Stock</p>
+                <button class="mt-4 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="Gloves" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">Warriors Elite Gloves</h2>
+                <p class="text-red-500 text-lg font-bold">£80.00</p>
+                <p class="text-gray-400 mt-2">Premium gloves designed for elite fighters.</p>
+                <p class="text-red-600 font-bold mt-2">Out of Stock</p>
+                <button class="mt-4 w-full bg-gray-600 px-4 py-2 text-white font-bold rounded-lg cursor-not-allowed">❌ Out of Stock</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="Shaker Bottle" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">FightCo Shaker Bottle</h2>
+                <p class="text-red-500 text-lg font-bold">£15.99</p>
+                <p class="text-gray-400 mt-2">Stay hydrated with this high-quality shaker bottle.</p>
+                <p class="text-green-400 font-bold mt-2">In Stock</p>
+                <button class="mt-4 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <img src="https://via.placeholder.com/300" alt="Headgear" class="w-full rounded-lg">
+                <h2 class="text-xl font-bold mt-4">FightCo MMA Headgear</h2>
+                <p class="text-red-500 text-lg font-bold">£99.99</p>
+                <p class="text-gray-400 mt-2">Protect yourself with durable MMA headgear.</p>
+                <p class="text-green-400 font-bold mt-2">In Stock</p>
+                <button class="mt-4 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">🛒 Add to Cart</button>
+            </div>
+
+        </div>
+
+        <!-- Product Categories -->
+        <div class="mt-10 bg-gray-900 p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold text-white">Product Categories</h2>
+            <ul class="mt-4 space-y-2">
+                <li class="border-b border-gray-700 py-2">Accessories</li>
+                <li class="border-b border-gray-700 py-2">Boxing-MMA</li>
+                <li class="border-b border-gray-700 py-2">Cardio</li>
+                <li class="border-b border-gray-700 py-2">Indoor-Cycles</li>
+                <li class="border-b border-gray-700 py-2">X-Fit</li>
+                <li class="border-b border-gray-700 py-2">Yoga and Pilates</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
