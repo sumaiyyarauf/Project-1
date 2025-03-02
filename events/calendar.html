@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js"></script>
+</head>
+<body class="bg-black text-white">
+
+    <div class="container mx-auto px-4 py-10">
+        
+        <!-- Calendar Header -->
+        <div class="flex justify-between items-center bg-red-600 p-4 rounded-lg">
+            <button onclick="prevMonth()" class="text-2xl font-bold">⬅️</button>
+            <h1 id="calendarMonth" class="text-2xl font-bold uppercase"></h1>
+            <button onclick="nextMonth()" class="text-2xl font-bold">➡️</button>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="grid grid-cols-7 gap-1 mt-4 text-center">
+            <div class="bg-red-600 py-2 font-bold">Mon</div>
+            <div class="bg-red-600 py-2 font-bold">Tue</div>
+            <div class="bg-red-600 py-2 font-bold">Wed</div>
+            <div class="bg-red-600 py-2 font-bold">Thu</div>
+            <div class="bg-red-600 py-2 font-bold">Fri</div>
+            <div class="bg-red-600 py-2 font-bold">Sat</div>
+            <div class="bg-red-600 py-2 font-bold">Sun</div>
+
+            <!-- Calendar Days -->
+            <div id="calendarDays" class="grid grid-cols-7 gap-1 col-span-7"></div>
+        </div>
+
+        <!-- Event Section -->
+        <div class="mt-6 p-4 bg-gray-900 rounded-lg">
+            <h2 class="text-xl font-bold">Event Details</h2>
+            <div id="eventDetails" class="mt-2 text-gray-300">Click on a date to add/view events.</div>
+            <input id="eventInput" type="text" placeholder="Add Event" class="mt-2 p-2 w-full bg-gray-700 rounded-lg text-white">
+            <button onclick="saveEvent()" class="mt-2 w-full bg-red-600 px-4 py-2 text-white font-bold rounded-lg">Save Event</button>
+        </div>
+
+    </div>
+
+    <script>
+        let currentMonth = dayjs().month();
+        let currentYear = dayjs().year();
+        let events = JSON.parse(localStorage.getItem('events')) || {};
+
+        function renderCalendar() {
+            const monthYear = dayjs().month(currentMonth).year(currentYear).format("MMMM, YYYY");
+            document.getElementById("calendarMonth").innerText = monthYear;
+            
+            const firstDay = dayjs().month(currentMonth).year(currentYear).startOf('month').day();
+            const totalDays = dayjs().month(currentMonth).year(currentYear).daysInMonth();
+            
+            let daysHTML = "";
+            for (let i = 1 - (firstDay === 0 ? 6 : firstDay - 1); i <= totalDays; i++) {
+                if (i > 0) {
+                    daysHTML += `<div onclick="selectDate(${i})" class="p-4 bg-gray-800 cursor-pointer rounded-lg hover:bg-gray-700">${i}</div>`;
+                } else {
+                    daysHTML += `<div></div>`;
+                }
+            }
+            document.getElementById("calendarDays").innerHTML = daysHTML;
+        }
+
+        function prevMonth() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar();
+        }
+
+        function nextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar();
+        }
+
+        function selectDate(day) {
+            const selectedDate = `${currentYear}-${currentMonth + 1}-${day}`;
+            document.getElementById("eventDetails").innerText = events[selectedDate] || "No events";
+            document.getElementById("eventInput").dataset.date = selectedDate;
+        }
+
+        function saveEvent() {
+            const date = document.getElementById("eventInput").dataset.date;
+            const eventText = document.getElementById("eventInput").value;
+            if (date && eventText) {
+                events[date] = eventText;
+                localStorage.setItem("events", JSON.stringify(events));
+                document.getElementById("eventDetails").innerText = eventText;
+                document.getElementById("eventInput").value = "";
+            }
+        }
+
+        renderCalendar();
+    </script>
+
+</body>
+</html>
