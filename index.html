@@ -11,13 +11,13 @@
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
         <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
-            
             <!-- Logo -->
             <div class="text-2xl font-bold">ATHLETE</div>
-
+            
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#home" class="hover:text-red-500">Home</a></li>
+                
                 <li class="relative group">
                     <a href="#" class="hover:text-red-500">Page!</a>
                     <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -27,30 +27,29 @@
                         <li><a href="./pages/class-details.html" class="block px-4 py-2 hover:bg-red-500">Class Details</a></li>
                     </ul>
                 </li>
-                
-
+    
                 <li class="relative group">
                     <a href="#" class="hover:text-red-500">Products</a>
                     <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                        <li><a href="./products/list.html" class="block px-4 py-2 hover:bg-red-500">Product list</a></li>
-                        <li><a href="./products/cart.html" class="block px-4 py-2 hover:bg-red-500">Product cart</a></li>
-                        <li><a href="./products/details.html" class="block px-4 py-2 hover:bg-red-500">Product details</a></li>
+                        <li><a href="./products/list.html" class="block px-4 py-2 hover:bg-red-500">Product List</a></li>
+                        <li><a href="./products/cart.html" class="block px-4 py-2 hover:bg-red-500">Product Cart</a></li>
+                        <li><a href="./products/details.html" class="block px-4 py-2 hover:bg-red-500">Product Details</a></li>
                     </ul>
                 </li>
-                
+    
                 <li><a href="./events/calendar.html" class="hover:text-red-500">Event Calendar</a></li>
 
                 <li class="relative group">
                     <a href="#" class="hover:text-red-500">Blog</a>
                     <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                        <li><a href="./blog/blog.html" class="block px-4 py-2 hover:bg-red-500">blog</a></li>
-                        <li><a href="./blog/blog.html" class="block px-4 py-2 hover:bg-red-500">blog details</a></li>
+                        <li><a href="./blog/blog-post.html" class="block px-4 py-2 hover:bg-red-500">Blog</a></li>
+                        <li><a href="./blog/blog.html" class="block px-4 py-2 hover:bg-red-500">Blog details</a></li>
                     </ul>
                 </li>
-           
+             
                 <li><a href="/contact/contact.html" class="hover:text-red-500">Contact Us</a></li>
             </ul>
-
+            
             <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,28 +57,51 @@
                 </svg>
             </button>
         </div>
-
-        <!-- Mobile Menu (Hidden by Default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white p-5">
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-white p-5 space-y-2">
             <a href="#home" class="block py-2 hover:text-red-500">Home</a>
-            <a href="#header" class="block py-2 hover:text-red-500">Header Option</a>
-            <a href="#page" class="block py-2 hover:text-red-500">Page!</a>
-            <a href="#products" class="block py-2 hover:text-red-500">Products</a>
-            <a href="#events" class="block py-2 hover:text-red-500">Event Calendar</a>
-            <a href="#blog" class="block py-2 hover:text-red-500">Blog</a>
-            <a href="#contact" class="block py-2 hover:text-red-500">Contact Us</a>
+            <div class="group">
+                <a href="#" class="block py-2 hover:text-red-500">Page!</a>
+                <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <li><a href="./pages/about-us.html" class="block px-4 py-2 hover:bg-red-500">About Us</a></li>
+                    <li><a href="./pages/trainers.html" class="block px-4 py-2 hover:bg-red-500">Our Trainer</a></li>
+                    <li><a href="./pages/pricing.html" class="block px-4 py-2 hover:bg-red-500">Pricing Table</a></li>
+                    <li><a href="./pages/class-details.html" class="block px-4 py-2 hover:bg-red-500">Class Details</a></li>
+                </ul>
+            </div>
+            <div class="group">
+                <a href="#" class="block py-2 hover:text-red-500">Products</a>
+                <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <li><a href="./products/list.html" class="block px-4 py-2 hover:bg-red-500">Product List</a></li>
+                    <li><a href="./products/cart.html" class="block px-4 py-2 hover:bg-red-500">Product Cart</a></li>
+                    <li><a href="./products/details.html" class="block px-4 py-2 hover:bg-red-500">Product Details</a></li>
+                </ul>
+            </div>
+        
+            <a href="./events/calendar.html" class="block py-2 hover:text-red-500">Event Calendar</a>
+            <div class="group">
+                <a href="#" class="block py-2 hover:text-red-500">Blog</a>
+                <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <li><a href="./blog/blog-post.html" class="block px-4 py-2 hover:bg-red-500">Blog</a></li>
+                    <li><a href="./blog/blog.html" class="block px-4 py-2 hover:bg-red-500">Blog details</a></li>
+         
+                </ul>
+            </div>
+            <a href="/contact/contact.html" class="block py-2 hover:text-red-500">Contact Us</a>
         </div>
     </nav>
-
+    
     <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
+    
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+    
     
     <section id="home" class="relative flex flex-col items-center justify-center text-center h-screen px-5 sm:px-10 lg:px-20 bg-cover bg-center" 
          style="background-image: url('https://images.pexels.com/photos/13122470/pexels-photo-13122470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
@@ -368,77 +390,77 @@
     </section>
 
 
-        <section class="max-w-6xl mx-auto text-center py-12 bg-black text-white">
-            <h2 class="text-3xl font-bold mb-6">LEETEE</h2>
+    <section class="max-w-6xl mx-auto text-center py-12 bg-black text-white px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-6">LEETEE</h2>
     
-            <!-- Filter Buttons -->
-            <div class="flex justify-center gap-4 mb-8">
-                <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded" data-category="all">All Class</button>
-                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="boxing">Boxing class</button>
-                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="yoga">Yoga class</button>
-                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="sport">Sport class</button>
-                <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="fitness">Fitness class</button>
-            </div>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
+            <button class="filter-btn active bg-red-500 text-white px-4 py-2 rounded" data-category="all">All Class</button>
+            <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="boxing">Boxing class</button>
+            <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="yoga">Yoga class</button>
+            <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="sport">Sport class</button>
+            <button class="filter-btn border border-gray-500 px-4 py-2 rounded" data-category="fitness">Fitness class</button>
+        </div>
     
-            <!-- Class Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="class-card boxing relative group overflow-hidden rounded-lg" data-category="boxing">
-                    <img src="https://images.pexels.com/photos/30863686/pexels-photo-30863686/free-photo-of-outdoor-basketball-practice-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Psychology of Training" class="w-full h-60 object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
-                        <h3 class="text-lg font-bold border border-white px-4 py-2">PSYCHOLOGY OF TRAINING</h3>
-                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                            Learn the mental strategies for peak performance and endurance in training.
-                        </p>
-                    </div>
-                </div>
-    
-                <!-- Card 2 -->
-                <div class="class-card yoga relative group overflow-hidden rounded-lg" data-category="yoga">
-                    <img src="https://images.pexels.com/photos/1608099/pexels-photo-1608099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Practical Self Defence" class="w-full h-60 object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
-                        <h3 class="text-lg font-bold border border-white px-4 py-2">PRACTICAL SELF DEFENCE</h3>
-                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                            Improve your self-defense skills with practical and real-life combat techniques.
-                        </p>
-                    </div>
-                </div>
-    
-                <!-- Card 3 -->
-                <div class="class-card sport relative group overflow-hidden rounded-lg" data-category="sport">
-                    <img src="https://images.pexels.com/photos/4754132/pexels-photo-4754132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Boxing for Girls" class="w-full h-60 object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80">
-                        <h3 class="text-lg font-bold border border-white px-4 py-2">BOXING FOR GIRLS</h3>
-                        <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                            Empower yourself with boxing techniques designed specifically for women.
-                        </p>
-                    </div>
+        <!-- Class Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="class-card boxing relative group overflow-hidden rounded-lg" data-category="boxing">
+                <img src="https://images.pexels.com/photos/30863686/pexels-photo-30863686/free-photo-of-outdoor-basketball-practice-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Psychology of Training" class="w-full h-60 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80 px-4">
+                    <h3 class="text-lg font-bold border border-white px-4 py-2">PSYCHOLOGY OF TRAINING</h3>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Learn the mental strategies for peak performance and endurance in training.
+                    </p>
                 </div>
             </div>
-        </section>
     
-        <script>
-            // Filter Functionality
-            const buttons = document.querySelectorAll(".filter-btn");
-            const cards = document.querySelectorAll(".class-card");
+            <!-- Card 2 -->
+            <div class="class-card yoga relative group overflow-hidden rounded-lg" data-category="yoga">
+                <img src="https://images.pexels.com/photos/1608099/pexels-photo-1608099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Practical Self Defence" class="w-full h-60 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80 px-4">
+                    <h3 class="text-lg font-bold border border-white px-4 py-2">PRACTICAL SELF DEFENCE</h3>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Improve your self-defense skills with practical and real-life combat techniques.
+                    </p>
+                </div>
+            </div>
     
-            buttons.forEach(button => {
-                button.addEventListener("click", () => {
-                    const category = button.getAttribute("data-category");
+            <!-- Card 3 -->
+            <div class="class-card sport relative group overflow-hidden rounded-lg" data-category="sport">
+                <img src="https://images.pexels.com/photos/4754132/pexels-photo-4754132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Boxing for Girls" class="w-full h-60 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:bg-opacity-80 px-4">
+                    <h3 class="text-lg font-bold border border-white px-4 py-2">BOXING FOR GIRLS</h3>
+                    <p class="text-sm mt-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                        Empower yourself with boxing techniques designed specifically for women.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     
-                    buttons.forEach(btn => btn.classList.remove("bg-red-500", "text-white"));
-                    button.classList.add("bg-red-500", "text-white");
-    
-                    cards.forEach(card => {
-                        if (category === "all" || card.getAttribute("data-category") === category) {
-                            card.classList.remove("hidden");
-                        } else {
-                            card.classList.add("hidden");
-                        }
-                    });
+    <script>
+        // Filter Functionality
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const category = button.getAttribute("data-category");
+                
+                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("bg-red-500", "text-white"));
+                button.classList.add("bg-red-500", "text-white");
+                
+                document.querySelectorAll(".class-card").forEach(card => {
+                    if (category === "all" || card.getAttribute("data-category") === category) {
+                        card.classList.remove("hidden");
+                        card.classList.add("flex");
+                    } else {
+                        card.classList.add("hidden");
+                        card.classList.remove("flex");
+                    }
                 });
             });
-        </script>
+        });
+    </script>
+    
         
         <footer class="bg-black text-gray-400 py-8">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
